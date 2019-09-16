@@ -62,7 +62,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #ユーザー認証
 gem 'devise'
 #bootstrap
-gem 'bootstrap', '~> 4.1.1'
+gem "bootstrap"
 gem 'jquery-rails'
 #devise
 gem "devise-i18n", "~> 1.8.2"
