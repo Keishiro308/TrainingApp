@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="col-sm10 offset-sm-1">
+    <%= week_calendar events: @tasks do |date, tasks| %>
+    <%= date.day %>
+    <% tasks.each do |task|%>
+    <div>
+      <%= task.name %>
+    </div>
+    <%end%>
+    <% end %>
+    <%= link_to('新しい予定', "/tasks/new", class: "btn btn-primary")%>
+  </div>
+</div>

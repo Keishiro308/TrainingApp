@@ -13,3 +13,51 @@
  */
 
 @import 'bootstrap';
+@import 'simple_calendar';
+
+.simple-calendar {
+  .day {}
+  .calendar-heading{
+    text-align: center;
+    .calendar-title{
+      font-size: 2rem;
+    }
+  }
+
+  .wday-0 {background-color: rgba(255, 0, 0, .2);}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {background-color: rgba(6, 1, 255, .2);}
+
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {}
+  .next-month { }
+  .current-month {}
+
+  .has-events {}
+}
+
+table{
+  thead{
+    tr{
+      th{
+        &:first-child{
+          background-color: rgba(255, 0, 0, 1);
+          color: white;
+        }
+        &:last-child{
+          background-color: rgba(6, 1, 255, 1);
+          color: white;
+        }
+      }
+    }
+  }
+}

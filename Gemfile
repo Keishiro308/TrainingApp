@@ -62,8 +62,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #ユーザー認証
 gem 'devise'
 #bootstrap
-gem "bootstrap"
 gem 'jquery-rails'
+gem 'popper_js', '~> 1.14.5'
+gem 'sassc-rails'
+gem "bootstrap"
+
 #devise
 gem "devise-i18n", "~> 1.8.2"
 gem 'devise-i18n-views'
+#calendar
+gem "simple_calendar", "~> 2.0"
