@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 offset-sm-1">
+      <%= calendar number_of_days: 1, events: @tasks, start_date: params[:date] do |date,tasks| %>
+      <%= date.day %>
+      <% tasks.each do |task| %>
+        <div class="task" style="background-color: <%="#{task.color}" %>;">
+          <p><%= task.name %></p>
+          <% if task.sub_task %>
+          もしくは
+          <p><%= task.sub_task %></p>
+          <%end%>
+          <%=link_to("削除する","/tasks/#{task.id}/destroy",method:"delete",class:"button") %>
+          <%=link_to("編集する","/tasks/#{task.id}/edit",class:"button") %>
+        </div>
+      <%end%>
+      <%end%>
+    </div>
+  </div>
+</div>

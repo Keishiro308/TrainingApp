@@ -1,13 +1,19 @@
 <div class="container">
-  <div class="col-sm10 offset-sm-1">
-    <%= week_calendar events: @tasks do |date, tasks| %>
-    <%= date.day %>
-    <% tasks.each do |task|%>
-    <div>
-      <%= task.name %>
+  <div class="row">
+    <div class="col-sm-10 offset-sm-1">
+      <%= week_calendar events: @tasks do |date, tasks| %>
+      <%= link_to date.day, "/users/#{current_user.id}/#{date}" %>
+      <% tasks.each do |task|%>
+      <div class="task" style="background-color: <%="#{task.color}" %>;">
+        <p><%= task.name %></p>
+        <% if task.sub_task %>
+        もしくは
+        <p><%= task.sub_task %></p>
+        <%end%>
+      </div>
+      <%end%>
+      <% end %>
+      <%= link_to('新しい予定', "/tasks/new", class: "btn btn-primary")%>
     </div>
-    <%end%>
-    <% end %>
-    <%= link_to('新しい予定', "/tasks/new", class: "btn btn-primary")%>
   </div>
 </div>

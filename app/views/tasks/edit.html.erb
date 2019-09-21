@@ -1,6 +1,6 @@
 <div class="container">
   <div class="col-sm-10 offset-sm-1">
-    <%=form_with(model: @task, url: tasks_create_path, local: true) do |f| %>
+    <%=form_with(model: @task,url: "/tasks/#{@task.id}/update", local: true, method:"put") do |f| %>
     <form action="">
       <div class="field from-group">
         <%= f.label :name, '予定の名前' %>
@@ -22,7 +22,7 @@
         <%= f.label :color, 'カラー' %>
         <%= f.select :color,{"赤" => "rgba(245, 2, 46, 0.5)","緑" => "rgba(14, 212, 10, 0.5)","青" => "rgba(0, 18, 255, 0.5)","黄色" => "rgba(227, 255, 0, 0.5)","紫色" => "rgba(112, 35, 236, 0.5)"},{},{class: "form-control"}%>
       </div>
-      <%= f.submit "予定を追加",class: "btn btn-primary"%>
+      <%= f.submit "予定を更新",class: "btn btn-primary"%>
     </form>
     <%end%>
   </div>

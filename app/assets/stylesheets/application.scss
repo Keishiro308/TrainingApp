@@ -23,6 +23,20 @@
       font-size: 2rem;
     }
   }
+  .task{
+    margin-bottom: 5px;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+  }
+  .task a.button{
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+    opacity: 1;
+
+  }
 
   .wday-0 {background-color: rgba(255, 0, 0, .2);}
   .wday-1 {}
@@ -43,21 +57,37 @@
   .current-month {}
 
   .has-events {}
-}
-
-table{
-  thead{
-    tr{
-      th{
-        &:first-child{
-          background-color: rgba(255, 0, 0, 1);
-          color: white;
+  table{
+    thead{
+      tr{
+        th{
+          &.day-0{
+            background-color: rgba(255, 0, 0, 1);
+            color: white;
+          }
+          &.day-6{
+            background-color: rgba(6, 1, 255, 1);
+            color: white;
+          }
         }
-        &:last-child{
-          background-color: rgba(6, 1, 255, 1);
-          color: white;
+      }
+    }
+    &.week-month{
+      thead{
+        tr{
+          th{
+            &:first-child{
+              background-color: rgba(255, 0, 0, 1);
+              color: white;
+            }
+            &:last-child{
+              background-color: rgba(6, 1, 255, 1);
+              color: white;
+            }
+          }
         }
       }
     }
   }
+
 }
