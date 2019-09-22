@@ -10,8 +10,12 @@
           もしくは
           <p><%= task.sub_task %></p>
           <%end%>
-          <%=link_to("削除する","/tasks/#{task.id}/destroy",method:"delete",class:"button") %>
-          <%=link_to("編集する","/tasks/#{task.id}/edit",class:"button") %>
+          <%=link_to("/tasks/#{task.id}/destroy",method:"delete",class:"button1",title:"予定を削除します",data: {confirm: "本当に削除しますか"}) do %>
+          <%= icon('fas','trash-alt') %>
+          <%end%>
+          <%=link_to("/tasks/#{task.id}/edit",class:"button2",title:"予定を編集します") do%>
+          <%= icon('fas','edit') %>
+          <%end%>
         </div>
       <%end%>
       <%end%>

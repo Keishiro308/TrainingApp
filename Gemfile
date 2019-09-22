@@ -72,3 +72,5 @@ gem "devise-i18n", "~> 1.8.2"
 gem 'devise-i18n-views'
 #calendar
 gem "simple_calendar", "~> 2.0"
+#fontawesome
+gem 'font-awesome-sass', '~> 5.11.1'
