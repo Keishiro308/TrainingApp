@@ -49,6 +49,12 @@
     font-size: 30px;
   }
 
+  .task-circle{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+  }
+
   .wday-0 {background-color: rgba(255, 0, 0, .2);}
   .wday-1 {}
   .wday-2 {}

@@ -6,4 +6,8 @@ class UsersController < ApplicationController
     # @tasks = Task.where("start_time LIKE?", "#{params[:date]}%")
     @tasks = Task.where(user_id: params[:id])
   end
+
+  def schedule
+    @tasks = Task.where(user_id: params[:id])
+  end
 end
